@@ -1,0 +1,25 @@
+package march15;
+
+public class ThreadExtend extends Thread{
+	
+	public ThreadExtend(String name) {
+		super(name);
+	}
+	
+	public void run(int loop, int millis) {
+		for(int i=0; i < loop; i++) {
+			try {
+				Thread.sleep(millis);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,14 @@
+package march15;
+
+public class ThreadExtend extends Thread{
+	
+	public ThreadExtend() {
+		super(name);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package march15;
+
+public class ThreadInterface implements Runnable{
+	
+	String name;
+	
+	public ThreadInterface(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("Thread " + name + " at " + i);
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ThreadInterface mobil = new ThreadInterface("Mobil");
+		ThreadInterface pesawat = new ThreadInterface("Pesawat");
+		
+		mobil.start();
+	}
+
+}
