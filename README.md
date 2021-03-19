@@ -1,9 +1,10 @@
 # Praktikum Pemrograman Berbasis Objek Lanjut
 
-> Aksal Syah Falah/M3119004/TI A 2019
+`Aksal Syah Falah` `M3119004` `TI A 2019`
 
-### Navigasi
+## Daftar Isi
+
 | Tugas | Package |
 | ---- | ---- |
-| File Handling IO | [march12]() |
-| Thread | [march19]() |
+| File Handling IO | [march12](https://github.com/aksalsf/oop-lanjut/blob/master/PBO%20Lanjut/src/march12) |
+| Thread | [march19](https://github.com/aksalsf/oop-lanjut/tree/master/PBO%20Lanjut/src/march19) |
