@@ -1,7 +1,7 @@
 content_assist_disabled_computers=org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000
 content_assist_favorite_static_members=org.junit.Assert.*;org.junit.Assume.*;org.junit.jupiter.api.Assertions.*;org.junit.jupiter.api.Assumptions.*;org.junit.jupiter.api.DynamicContainer.*;org.junit.jupiter.api.DynamicTest.*
 content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.lang.Runnable"><rhs name\="march15.SynchronousMethod"/></lhs></history>
-content_assist_number_of_computers=13
+content_assist_number_of_computers=12
 content_assist_prefix_completion=true
 eclipse.preferences.version=1
 org.eclipse.jdt.ui.formatterprofiles.version=20

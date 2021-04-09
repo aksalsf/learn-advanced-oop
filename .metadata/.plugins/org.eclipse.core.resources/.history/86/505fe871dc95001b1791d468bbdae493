@@ -1,0 +1,82 @@
+package belajarGUI;
+
+import java.awt.Button;
+import java.awt.Choice;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Panel;
+import java.awt.TextArea;
+import java.awt.TextField;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class FrameAWT extends Frame implements WindowListener {
+	
+	String nim, nama, alamat, tempat_lahir, tanggal_lahir;
+	TextField input_nim, input_nama, input_tempat_lahir, input_tanggal_lahir;
+	Choice input_jenis_kelamin;
+	TextArea input_alamat;
+	Button myBtn;
+	
+	public FrameAWT() {
+		super("Belajar GUI");
+		/* Panel */
+		Panel myPanel = new Panel();
+		add(myPanel);
+		myPanel.setLayout(new GridLayout(7,2));
+		/* Window Size */
+		setSize(720, 480);
+		setVisible(true);
+		
+		addWindowListener(this);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new FrameAWT();
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+		// Biar bisa exit pas klik tanda [x]
+		System.exit(ABORT);
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

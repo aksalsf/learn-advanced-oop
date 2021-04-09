@@ -1,0 +1,117 @@
+package belajarGUI;
+
+import java.awt.Button;
+import java.awt.Event;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+/*
+ * Gunakan Frame,TextField, Button, Label dan buat tampilan
+ * */
+
+public class ThreadForm extends Frame implements WindowListener, ActionListener, Runnable {
+	
+	int angka;
+	Label label;
+	TextField field_angka;
+	Button myButton;
+	
+	public ThreadForm() {
+		super("Timer | M3119004 - Aksal Syah Falah");
+		Panel myPanel = new Panel();
+		add(myPanel);
+		myPanel.setLayout(new GridLayout(2,2));
+		
+		// Form
+		myPanel.add(field_angka = new TextField());
+		myButton = new Button("Mulai");
+		myButton.addActionListener(this);
+		myPanel.add(myButton);
+		label = new Label();
+		label.setText("Isikan dengan angka");
+		myPanel.add(label);
+		
+		setSize(360,90);
+		setVisible(true);
+		addWindowListener(this);
+	}
+
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		new ThreadForm();
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		System.out.println("simpan");
+		angka = Integer.parseInt(field_angka.getText());
+		System.out.println(angka);
+		Thread gantiLabel = new Thread(new Label("Coba"));
+		gantiLabel.start();
+	}
+	
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			System.out.println("Thread "  + i);
+		}		
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+		System.exit(ABORT);
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

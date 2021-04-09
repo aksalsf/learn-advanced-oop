@@ -1,0 +1,18 @@
+package belajarGUI;
+
+import java.awt.Frame;
+
+public class FrameAWT extends Frame {
+	
+	public FrameAWT() {
+		super("Belajar GUI");
+		setSize(720, 480);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		new FrameAWT();
+	}
+
+}
