@@ -1,0 +1,12 @@
+package belajarGUI;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.plaf.ButtonUI;
+public class RadioCombo extends JFrame implements ActionListener,ChangeListener{
+	
+}

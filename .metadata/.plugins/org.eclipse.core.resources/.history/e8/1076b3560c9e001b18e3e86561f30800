@@ -1,0 +1,79 @@
+package belajarGUI;
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.plaf.ButtonUI;
+
+public class RadioCombo extends JFrame implements ActionListener,ChangeListener{
+	
+	ButtonGroup bg;
+	JRadioButton rb1,rb2;
+	TextField fieldJumlah;
+	int jumlah;
+	JComboBox cb;
+	JButton b;
+	final String[] jenis = {"PC", "Laptop", "Monitor"};
+	JMenuBar mb;
+	JMenu m;
+	public RadioCombo()
+	{
+	super("Radio Combo");
+	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	Container cp = this.getContentPane();
+	cp.setLayout(new FlowLayout());
+	mb = new JMenuBar();
+	mb.add(m=new JMenu("exit"));
+	m.addChangeListener((ChangeListener) this);;
+	this.setJMenuBar(mb);
+	cp.add(cb =new JComboBox(jenis));
+	cp.add(rb1 = new JRadioButton("Member"));
+	cp.add(rb2 = new JRadioButton("Non Member"));
+	bg = new ButtonGroup();
+	bg.add(rb1);
+	bg.add(rb2);
+	bg.add(fieldJumlah = new TextField());
+	cp.add(b = new JButton("Simpan"));
+	this.setVisible(true);
+	b.addActionListener((ActionListener) this);
+	}
+	
+	public static void main(String args[])
+	{
+	new RadioCombo();
+	}
+
+	@Override
+	public void stateChanged(ChangeEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource() == m)
+		{
+		System.exit(0);
+		}
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getSource() == b)
+		{
+		String radio=null;
+		if(rb1.isSelected() == true)
+		{
+		radio = rb1.getText();
+		}else{
+		radio = rb2.getText();
+		}
+		System.out.println("Radio Button Memilih: "+radio);
+		String combo = cb.getSelectedItem().toString();
+		System.out.println("ComboBox Memilih: "+combo);
+		}
+
+	}
+	
+}
